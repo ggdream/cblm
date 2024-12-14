@@ -22,9 +22,9 @@ jobs:
       - uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: dist/${{ github.ref }}/cblm-${{ github.ref }}+${{ github.ref }}-linux.deb
-          release_name: ${{ github.sha }}
-          asset_name: cblm-${{ github.ref }}-linux-x86_64.deb
+          file: dist/${GITHUB_REF/refs\/tags\//}/cblm-${GITHUB_REF/refs\/tags\//}+${GITHUB_REF/refs\/tags\//}-linux.deb
+          release_name: ${GITHUB_REF/refs\/tags\//}
+          asset_name: cblm-${GITHUB_REF/refs\/tags\//}-linux-x86_64.deb
           tag: ${{ github.ref }}
           overwrite: true
           prerelease: false
