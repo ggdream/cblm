@@ -1,6 +1,8 @@
 name: build linux
 
-on: [push]
+on:
+  push:
+    tags: [ 'v*.*.*' ]
 
 jobs:
   build:
@@ -20,9 +22,9 @@ jobs:
       - uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: dist/1.0.0/cblm-1.0.0+1.0.0-linux.deb
+          file: dist/${{ github.ref }}/cblm-${{ github.ref }}+${{ github.ref }}-linux.deb
           release_name: ${{ github.sha }}
-          asset_name: cblm-${{ github.sha }}-linux-x86_64.deb
+          asset_name: cblm-${{ github.ref }}-linux-x86_64.deb
           tag: ${{ github.ref }}
           overwrite: true
           prerelease: false
