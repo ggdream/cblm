@@ -12,6 +12,7 @@ jobs:
           channel: 'stable'
           flutter-version: 3.27.0
       - run: flutter config --enable-linux-desktop
+      - run: dart pub global activate flutter_distributor
       - run: flutter_distributor package --platform linux --targets deb
       - uses: svenstaro/upload-release-action@v2
         with:
