@@ -22,7 +22,7 @@ jobs:
       - uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: dist/${{ github.ref_name }}/cblm-${{ github.ref_name }}+${{ github.ref_name }}-linux.deb
+          file: dist/${{ github.ref_name | substr(1) }}/cblm-${{ github.ref_name | substr(1) }}+${{ github.ref_name | substr(1) }}-linux.deb
           release_name: ${{ github.ref_name }}
           asset_name: cblm-${{ github.ref_name }}-linux-x86_64.deb
           tag: ${{ github.ref }}
