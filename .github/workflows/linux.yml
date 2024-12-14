@@ -21,7 +21,8 @@ jobs:
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: dist/1.0.0/cblm-1.0.0+1.0.0-linux.deb
-          asset_name: cblm-${{ github.ref }}-linux-x86_64.deb
-          tag: ${{ github.ref }}
+          release_name: ${{ github.sha }}
+          asset_name: cblm-${{ github.sha }}-linux-x86_64.deb
+          tag: ${{ github.sha }}
           overwrite: true
           prerelease: false
