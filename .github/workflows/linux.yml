@@ -23,6 +23,6 @@ jobs:
           file: dist/1.0.0/cblm-1.0.0+1.0.0-linux.deb
           release_name: ${{ github.sha }}
           asset_name: cblm-${{ github.sha }}-linux-x86_64.deb
-          tag: ${{ github.sha }}
+          tag: ${{ github.ref }}
           overwrite: true
           prerelease: false
