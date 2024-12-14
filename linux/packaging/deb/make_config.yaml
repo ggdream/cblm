@@ -1,0 +1,19 @@
+display_name: cblm
+package_name: cblm
+maintainer:
+  name: mocaraka
+  email: gdream@yeah.net
+priority: optional
+section: x11
+essential: false
+icon: images/tray_icon.png
+keywords:
+  - Clipboard Manager
+generic_name: Clipboard Manager Application
+installed_size: 22671604
+categories:
+  - Utility
+dependencies:
+  - gir1.2-appindicator3-0.1
+  - libkeybinder-3.0-0
+startup_notify: true
