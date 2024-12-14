@@ -20,7 +20,7 @@ jobs:
       - uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: build/windows/runner/cerise-win-x64.7z
+          file: dist/1.0.0/cblm-1.0.0-linux.deb
           asset_name: cblm-${{ github.ref }}-linux-x86_64.deb
           tag: ${{ github.ref }}
           overwrite: true
